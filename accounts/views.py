@@ -98,3 +98,9 @@ def deleteOrder(request, pk):
 
 def login(request):
     return render(request, 'accounts/login.html')
+
+
+def about(request):
+    ab = About.objects.get
+    context = {'ab': ab}
+    return render(request, 'accounts/about.html', context)
